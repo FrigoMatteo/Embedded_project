@@ -31,6 +31,7 @@ In our system we use:
 - ***Humidity/temperature sensor***, we use this sensor to check and make some controlls about the humidity and temperature in the area close to our solar panels.
 - ***Embedded light sensor***, we use this sensor to compare the light with the value returned by our solar panels.
 - ***Solar panels***, those are devices we have to check.
+- ***MQTT Server***, is a light-weight messaging protocol used to communicate between machines, using a centralized server.
 
 The system works by constantly monitoring our solar panels, where based on some pre-registered value we evaluate if it is properly working. \
 The pre-register data comes from ideal conditions of the solar panel, such as sunny day, cleaned solar panel etc. Then, by using those data, we compare with what we got from the solar panels and we make the decisions.
@@ -40,14 +41,13 @@ For those kind of process, we also consider the weather conditions, since he can
 ### Project view
 Image of the project view, such as basic graphic view and how the code is divided.
 
-## Implementation
 ### Used hardware
 The main hardware we used is a **MSP432p401r** and a **ESP32**. Those two are the main components of our project, since are the one who process the received data from sensors or external input. \
 The MSP432p401r is a ultra-low-power mixed-signal microcontroller, configured with an ARM Cortex-M4 processor. Next we are going to use his integreted lux sensor and the UART connection to communicate with the ESP and the other sensors.
 ### Software IDE for MSP432
 To flash the wanted program into the microcontroller, we need to use a specific software given by the **Texas Instrument Company**, called [Code Composer Studio](https://www.ti.com/tool/download/CCSTUDIO/). This software let us use our microcontroller.
 
-The last process before using our microcontroller, it's to install and include some specific usefull libraries for the implementation of the project. To install those libraries, you can find them [here](https://drive.google.com/file/d/1_5TsECed3wNJpIpllxYYdD06aFbkk7Fc/view) \
+The last process before using our microcontroller, it's to install and include some specific usefull libraries for the implementation of the project. To install those libraries, you can find them [here].(https://drive.google.com/file/d/1_5TsECed3wNJpIpllxYYdD06aFbkk7Fc/view) \
 To include those libraries you need to insert them inside your project propriety at the following paths:
 
 #### ARM linker
@@ -59,4 +59,81 @@ To include those libraries you need to insert them inside your project propriety
 <p align="center">
   <img src="images for embedded/Include_libraries.png" width="700">
 </p>
+
+# Tools configurations:
+
+
+Follow the schema below in the picture and connect all the sensors and microcontrollers to each other. \
+Try to keep the same ports and pins number, since they are fondamental for the functioning of the project:
+<p align="center">
+  <img src="images for embedded/launch_debug.png" width="500">
+</p>
+
+
+## MSP432 initialization:
+
+After that, you need to flash the memory into the MSP432 by launching this command in the CCS program (you can find the download of it <a href="#implementation">here</a>):
+<p align="center">
+  <img src="images for embedded/launch_debug.png" width="500">
+</p>
+
+## ESP32 initialization:
+
+First, if you haven't done it yet, you need to install the Arduino IDE, you can find the link [here](https://www.arduino.cc/en/software) . \
+We created a specific folder for the ESP32 code `Nome della cartella codice Arduino ESP32`, where in the `code.ino` you can find the code you need to flash in the ESP32 memory. \
+After finding the file, you need to connect the ESP32 to your computer and flash the program into the ESP32 memory with this command:
+<p align="center">
+  <img src="images for embedded/launch_debug_arduino_debug.png" width="500">
+</p>
+
+With the code you have just flashed, we can manage to connect with two of our devices:
+* MQTT server, so we can send and receive data from our server.
+* ESP32 UART connection to our MSP432, so we can send and get information about our connected sensors.
+
+## Initialization of the MQTT server
+After doing so, we install the components for initialize the MQTT server. You need to follow those steps:
+
+  <li>You can find the link to download it: https://mosquitto.org/download/ </li>
+  <li>Open the command line as administrator.</li>
+  <li>
+    After opening the command line, you need to go to the mosquito directory, the folder where the mosquito download is.
+  </li>
+  <p align="center">
+    <img src="images for embedded/command_line_cd.png" width="300">
+  </p>
+  <li>
+    Then, we need to start the server with this command:
+  </li>
+  
+  ``` 
+    mosquitto -v -c mosquitto.conf 
+  ```
+
+  <li>
+    If you have correctly followed all the step of before, you should see those kind of replies:
+  </li>
+  <p align="center">
+    <img src="images for embedded/server_example_show.jpg" width="600">
+  </p>
+
+# Authors
+
+* [Matteo Frigo](https://github.com/FrigoMatteo)
+  * Telegram bot
+  * NodeJS server
+  * ESP32 code 
+* [Quentin Meneghini](https://github.com/kenny2817)
+  * UART communication
+  * Light and temperature sensors
+  * Electrical wiring
+* [Alberto Messa](https://github.com/MessaAlberto)
+  * Aplication interface
+  * Soil moisture sensor mapping
+  * Code testing
+
+## Links
+
+* [Video](https://youtu.be/mkZK5LPMyHU)
+* [Project presentation](https://github.com/dongi01/SmartIrrigation_IoTUniTN/blob/64b6fd78eb5f5494780a2737d49178241027ac5e/IoT%20Project%20Presentation.pptx)
+
 
