@@ -47,7 +47,7 @@ The MSP432p401r is a ultra-low-power mixed-signal microcontroller, configured wi
 ### Software IDE for MSP432
 To flash the wanted program into the microcontroller, we need to use a specific software given by the **Texas Instrument Company**, called [Code Composer Studio](https://www.ti.com/tool/download/CCSTUDIO/). This software let us use our microcontroller.
 
-The last process before using our microcontroller, it's to install and include some specific usefull libraries for the implementation of the project. To install those libraries, you can find them [here].(https://drive.google.com/file/d/1_5TsECed3wNJpIpllxYYdD06aFbkk7Fc/view) \
+The last process before using our microcontroller, it's to install and include some specific usefull libraries for the implementation of the project. To install those libraries, you can find them [here](https://drive.google.com/file/d/1_5TsECed3wNJpIpllxYYdD06aFbkk7Fc/view). \
 To include those libraries you need to insert them inside your project propriety at the following paths:
 
 #### ARM linker
@@ -78,13 +78,16 @@ After that, you need to flash the memory into the MSP432 by launching this comma
 
 ## ESP32 initialization:
 
-First, if you haven't done it yet, you need to install the Arduino IDE, you can find the link [here](https://www.arduino.cc/en/software) .\
-You need also the library for the MQTT communication: \
+First, if you haven't done it yet, you need to install the Arduino IDE, you can find the link [here](https://www.arduino.cc/en/software) . \
+You need also the library for the MQTT communication: 
+
 <p align="center">
-  <img src="images for embedded/PubSubClient lib.png" width="500">
+  <img src="images for embedded/PubSubClient lib.png" width="300">
 </p>
-We created a specific folder for the ESP32 code `Nome della cartella codice Arduino ESP32`, where in the `code.ino` you can find the code you need to flash in the ESP32 memory. \
-In `code.ino` you have to modify the following code:
+
+We created a specific folder for the ESP32 code `Nome della cartella codice Arduino ESP32` , where in the `code.ino` you can find the code you need to flash in the ESP32 memory.\
+In ` code.ino ` you have to modify the following code:
+
 ```
 // Wi-Fi setting
 const char* ssid = "/* WiFi name */";
@@ -96,6 +99,7 @@ const int mqttPort = 1883;                // default server communication port
 const char* mqttUser = "MPS432";          // casual name
 const char* mqttPassword = "";            // left it empty it's not request
 ```
+
 After finding the file, you need to connect the ESP32 to your computer and flash the program into the ESP32 memory with this command:
 <p align="center">
   <img src="images for embedded/launch_debug_arduino_debug.png" width="500">
