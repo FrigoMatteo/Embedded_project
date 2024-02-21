@@ -10,13 +10,30 @@
       <ul>
         <li><a href="#project-view">Project view</a></li>
       </ul>
-    <li><a href="#implementation">Implementation</a></li>
       <ul>
-        <li><a href="#preview-of-the-project">Used hardware</a></li>
+        <li><a href="#used-hardware">Used hardware</a></li>
       </ul>
-    <li><a href="#details">Details</a></li>
+      <ul>
+        <li><a href="#software-ide-for-msp432">Software IDE</a></li>
+      </ul>
+    <li><a href="#tools-configuration">Tools configuration</a></li>
+      <ul>
+        <li><a href="#tools-configuration">Project wiring</a></li>
+      </ul>
+      <ul>
+        <li><a href="#msp432-initialization">MSP432</a></li>
+      </ul>
+      <ul>
+        <li><a href="#esp32-initialization">ESP32</a></li>
+      </ul>
+      <ul>
+        <li><a href="#initialization-of-the-mqtt-server">MQTT server</a></li>
+      </ul>
+      <ul>
+        <li><a href="#creation-of-the-web-app">Web Application</a></li>
+      </ul>
     <li><a href="#authors">Collaborators</a></li>
-    <li><a href="#links">Useful links</a></li>
+    <li><a href="#links">Links</a></li>
   </ol>
 
 
