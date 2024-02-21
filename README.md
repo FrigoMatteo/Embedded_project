@@ -62,7 +62,6 @@ To include those libraries you need to insert them inside your project propriety
 
 # Tools configurations:
 
-
 Follow the schema below in the picture and connect all the sensors and microcontrollers to each other. \
 Try to keep the same ports and pins number, since they are fondamental for the functioning of the project:
 <p align="center">
