@@ -39,7 +39,32 @@ The pre-register data comes from ideal conditions of the solar panel, such as su
 For those kind of process, we also consider the weather conditions, since he can critically affect the functionality of the solar panel. In fact, by using temperature and humidity sensor we can figure out if our solar panel isn't working for that reason, or other related conditions.
 
 ### Project view
-Image of the project view, such as basic graphic view and how the code is divided.
+<p align="center">
+  <img src="images for embedded/projects_files.png" width="400">
+</p>
+
+```
+Solar Panel project:
+├── ccsProject
+│   ├── main.c                     # Main code of the MSP432
+│   └── Hardware                   # We initialize the hardware of our devices
+|       ├── hardware_init          # Initialize the sensors and MSP432 modules
+|       ├── Graphic                # Graphic part of the MSP432
+|       ├── LcdDriver              # Drivers of the MSP432 LCD
+|       └── luxDriver              # Drivers of the integrated MSP432 lux sensor
+├── ESP32
+│   ├── main.ino                   # Main code of the ESP32
+│   ├── Wifi                       # Include libraries for the Wifi connection
+│   ├── PubSubClient               # Include libraries for MQTT connection
+├── serverProject
+│   ├── BlogicDB.java              # It handle the databases operations
+│   ├── mqtt-client.js             # Useful functions for the web-application
+│   ├── mqttws31.js                # Main library of the MQTT server
+├── Read_me_Images
+│   └── images                     # Images for the Readme file
+└── README.md
+```
+
 
 ### Used hardware
 The main hardware we used is a **MSP432p401r** and a **ESP32**. Those two are the main components of our project, since are the one who process the received data from sensors or external input. \
