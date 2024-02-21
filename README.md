@@ -201,6 +201,7 @@ We used VSCode to create a web application to implement some features, such as:
 If you don't know how to create a web-application, these links can help you:
 - ***[Create Maven project](https://code.visualstudio.com/docs/java/java-build)***,
 - ***[Add server](https://code.visualstudio.com/docs/java/java-tomcat-jetty)***, we used Apache-Tomcat-9.0.41
+- ***[Postgresql](https://www.commandprompt.com/education/how-to-connect-to-postgresql-from-visual-studio-code/#:~:text=Despite%20having%20its%20CLI%20and,within%20the%20VS%20Code%20editor)***,
 
 Once you built your project with Maven and add the demployment on the Tomcat server, you can reach your web-app at the link: www.localhost:8080/solar_panel_webapp/
 
