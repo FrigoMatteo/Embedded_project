@@ -74,13 +74,29 @@ Try to keep the same ports and pins number, since they are fondamental for the f
 
 After that, you need to flash the memory into the MSP432 by launching this command in the CCS program (you can find the download of it <a href="#implementation">here</a>):
 <p align="center">
-  <img src="images for embedded/launch_debug.png" width="500">
+  <img src="images for embedded/launch_debug.png" height="100">
 </p>
 
 ## ESP32 initialization:
 
-First, if you haven't done it yet, you need to install the Arduino IDE, you can find the link [here](https://www.arduino.cc/en/software) . \
+First, if you haven't done it yet, you need to install the Arduino IDE, you can find the link [here](https://www.arduino.cc/en/software) .\
+You need also the library for the MQTT communication: \
+<p align="center">
+  <img src="images for embedded/PubSubClient lib.png" width="500">
+</p>
 We created a specific folder for the ESP32 code `Nome della cartella codice Arduino ESP32`, where in the `code.ino` you can find the code you need to flash in the ESP32 memory. \
+In `code.ino` you have to modify the following code:
+```
+// Wi-Fi setting
+const char* ssid = "/* WiFi name */";
+const char* password = "/* WiFi password */";
+
+// MQTT setting
+const char* ipServer = "/* MQTT server IP */";
+const int mqttPort = 1883;                // default server communication port
+const char* mqttUser = "MPS432";          // casual name
+const char* mqttPassword = "";            // left it empty it's not request
+```
 After finding the file, you need to connect the ESP32 to your computer and flash the program into the ESP32 memory with this command:
 <p align="center">
   <img src="images for embedded/launch_debug_arduino_debug.png" width="500">
