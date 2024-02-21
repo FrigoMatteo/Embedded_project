@@ -136,7 +136,7 @@ You need also the library for the MQTT communication:
 </p>
 
 We created a specific folder for the ESP32 code `esp32` , where in the `esp32_mqtt.ino` you can find the code you need to flash in the ESP32 memory.\
-In ` code.ino ` you have to modify the following code:
+In ` esp32_mqtt.ino ` you have to modify the following code:
 
 ```
 // Wi-Fi setting
