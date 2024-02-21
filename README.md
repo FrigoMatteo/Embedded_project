@@ -24,19 +24,20 @@
 ## Preview of the project
 Hi, welcome to our solar panel project for embedded system. \
 The idea of this project was to change the way to manage the solar panels.\
-Since the controlling of solar panels can be difficult or time consuming, we wanted to garantee a way for a user to check them by remote, where we can give him some information about, simply by using their smartphone or computer. \
+Since the controlling of solar panels can be difficult or time consuming, we wanted to garantee a way for a user to check them by remote, where we can give him some information about, simply by using a website on their smartphone or computer. \
 In our system we use:
 - ***MSP432 P401R***, it's the master device, where, based on some input related to the solar panel and some other conditions, he will decide whether to send a messagge to our user.
 - ***ESP32***, we use this microcontroller for the wi-fi module. Obviously useful if we need to communicate with the user about the solar panel status.
-- ***Humidity/temperature sensor***, we use this sensor to check and make some controlls about the humidity and temperature in the area close to our solar panels.
+- ***DHT20 humidity/temperature sensor***, we use this sensor to check and make some controlls about the humidity and temperature in the area close to our solar panels.
 - ***Embedded light sensor***, we use this sensor to compare the light with the value returned by our solar panels.
+- ***INA219 power sensor***, we use this sensor to effectivly register the Watt produced by the solar panel.
 - ***Solar panels***, those are devices we have to check.
 - ***MQTT Server***, is a light-weight messaging protocol used to communicate between machines, using a centralized server.
 
 The system works by constantly monitoring our solar panels, where based on some pre-registered value we evaluate if it is properly working. \
 The pre-register data comes from ideal conditions of the solar panel, such as sunny day, cleaned solar panel etc. Then, by using those data, we compare with what we got from the solar panels and we make the decisions.
 
-For those kind of process, we also consider the weather conditions, since he can critically affect the functionality of the solar panel. In fact, by using temperature and humidity sensor we can figure out if our solar panel isn't working for that reason, or other related conditions.
+For those kind of process, we also consider the weather conditions, since he can critically affect the functionality of the solar panel. In fact, by using temperature, humidity and brightness sensor we can figure out if our solar panel isn't working for that reason, or other related conditions.
 
 ### Project view
 <p align="center">
@@ -159,6 +160,18 @@ After doing so, we install the components for initialize the MQTT server. You ne
   <p align="center">
     <img src="images for embedded/server_example_show.jpg" width="600">
   </p>
+
+  After that, each communication that pass throught the server could be read on this command line. The information that will be shown are:
+  * star/end connection of a Client
+  * subscribtion to a topic for a Client
+  * message sending(topic name, payload weight, sender)
+
+
+  ## Creation of the Web App
+We used VSCode to create a web application to implement some features, such as:
+* change the sensor reading frequency
+* view table for last registered sensor data
+* get data from a Postgres database
 
 # Authors
 
