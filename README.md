@@ -16,9 +16,9 @@
       <ul>
         <li><a href="#software-ide-for-msp432">Software IDE</a></li>
       </ul>
-    <li><a href="#tools-configuration">Tools configuration</a></li>
+    <li><a href="#tools-configurations">Tools configuration</a></li>
       <ul>
-        <li><a href="#tools-configuration">Project wiring</a></li>
+        <li><a href="#tools-configurations">Project wiring</a></li>
       </ul>
       <ul>
         <li><a href="#msp432-initialization">MSP432</a></li>
