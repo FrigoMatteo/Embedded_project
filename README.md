@@ -135,7 +135,7 @@ You need also the library for the MQTT communication:
   <img src="images for embedded/PubSubClient lib.png" width="300">
 </p>
 
-We created a specific folder for the ESP32 code `Nome della cartella codice Arduino ESP32` , where in the `code.ino` you can find the code you need to flash in the ESP32 memory.\
+We created a specific folder for the ESP32 code `esp32` , where in the `esp32_mqtt.ino` you can find the code you need to flash in the ESP32 memory.\
 In ` code.ino ` you have to modify the following code:
 
 ```
