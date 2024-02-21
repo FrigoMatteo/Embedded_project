@@ -1,7 +1,7 @@
 # Solar Panel embedded project
 
-<index>
-  <summary>Index:</summary>
+
+  <h3>Index:</h3>
   <ol>
     <li><a href="#preview-of-the-project">Preview of the Project</a></li>
       <ul>
@@ -18,7 +18,7 @@
     <li><a href="#authors">Collaborators</a></li>
     <li><a href="#links">Useful links</a></li>
   </ol>
-</index>
+
 
 
 ## Preview of the project
@@ -96,10 +96,17 @@ Try to keep the same ports and pins number, since they are fondamental for the f
 
 
 ## MSP432 initialization:
+When you create your CCS project with all the related files inside our folder `folder CCS`, make sure to implement all the libraries of [before](#software-ide-for-msp432).
+After that, you need to flash the memory into the MSP432 by launching this command in the CCS program: 
 
-After that, you need to flash the memory into the MSP432 by launching this command in the CCS program (you can find the download of it <a href="#implementation">here</a>):
 <p align="center">
   <img src="images for embedded/launch_debug.png" height="100">
+</p>
+
+After uploading the flash inside the MSP432, you should see a screen like that appearing on your LCD:
+
+<p align="center">
+  <img src="images for embedded/LCD_example.jpg" height="300">
 </p>
 
 ## ESP32 initialization:
