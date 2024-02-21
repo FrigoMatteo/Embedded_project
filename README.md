@@ -233,7 +233,8 @@ DA MODIFICARE
 * [Matteo Frigo](https://github.com/FrigoMatteo)
   * UART communication
   * Light sensor
-  * ESP32 code 
+  * ESP32 code
+  * Testing part
 * [Quentin Meneghini](https://github.com/kenny2817)
   * Graphic view
   * Temperature/humidity sensors
