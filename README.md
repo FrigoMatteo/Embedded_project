@@ -40,7 +40,7 @@ For those kind of process, we also consider the weather conditions, since he can
 
 ### Project view
 <p align="center">
-  <img src="images for embedded/projects_files.png" width="400">
+  <img src="images for embedded/init_project_files.png" width="400">
 </p>
 
 ```
