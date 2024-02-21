@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  version="2.5"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+
+  <servlet>
+    <servlet-name>bLogicDB</servlet-name>
+    <servlet-class>web.BLogicDB</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>getMinMax</servlet-name>
+    <servlet-class>web.GetMinMax</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>bLogicDB</servlet-name>
+    <url-pattern>/bLogicDB</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getMinMax</servlet-name>
+    <url-pattern>/getMinMax</url-pattern>
+  </servlet-mapping>
+
+
+
+  
+</web-app>

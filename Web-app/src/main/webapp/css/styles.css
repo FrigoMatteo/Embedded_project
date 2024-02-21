@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Imposta l'altezza al 100% della viewport */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; /* Imposta la larghezza massima del container, modifica secondo le tue esigenze */
+    width: 100%;
+    padding: 0 20px; /* Aggiungi spaziatura sui lati del container, modifica secondo le tue esigenze */
+}
+
+.frequency-column {
+    text-align: center;
+}
+
+.frequency-button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+}
+
+.frequency-button.selected {
+    background-color: #4CAF50; 
+    color: white; 
+}
+
+.frequency-button.disabled {
+    background-color: #ddd; /* Colore grigio chiaro per i bottoni disabilitati */
+    color: #888; /* Colore del testo grigio per i bottoni disabilitati */
+    cursor: not-allowed; /* Cambia il cursore per indicare che il bottone non è cliccabile */
+}
+
+.table-container,
+.values-table {
+    margin: 10px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.values-table h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.data-table tr:first-child {
+    font-weight: bold;
+}
+
+#confirmationMessage {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Assicura che il messaggio sia in primo piano */
+}
+
+#errorMessage {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Assicura che il messaggio sia in primo piano */
+}
+
+.alarm-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    display: none;
+}
+
+.alarm-banner.active {
+    display: flex;
+    background-color: red;
+    color: white;
+}
+
+.alarm-banner.active.inverted {
+    display: flex;
+    background-color: white;
+    color: red;
+}
