@@ -227,18 +227,21 @@ SOLAR_PANEL_WEBAPP:
 
 # Authors
 
+DA MODIFICARE
+
 * [Matteo Frigo](https://github.com/FrigoMatteo)
-  * Telegram bot
-  * NodeJS server
+  * UART communication
+  * Light sensor
   * ESP32 code 
 * [Quentin Meneghini](https://github.com/kenny2817)
-  * UART communication
-  * Light and temperature sensors
+  * Graphic view
+  * Temperature/humidity sensors
   * Electrical wiring
 * [Alberto Messa](https://github.com/MessaAlberto)
-  * Aplication interface
-  * Soil moisture sensor mapping
-  * Code testing
+  * Graphic view
+  * Web application
+  * MQTT server
+  * ESP32 code
 
 ## Links
 
