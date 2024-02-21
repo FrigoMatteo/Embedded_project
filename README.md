@@ -173,6 +173,34 @@ We used VSCode to create a web application to implement some features, such as:
 * view table for last registered sensor data
 * get data from a Postgres database
 
+
+If you don't know how to create a web-application, these links can help you:
+- ***[Create Maven project](https://code.visualstudio.com/docs/java/java-build)***,
+- ***[Add server](https://code.visualstudio.com/docs/java/java-tomcat-jetty)***, we used Apache-Tomcat-9.0.41
+
+Once you built your project with Maven and add the demployment on the Tomcat server, you cane reach your web-app at the link: www.localhost:8080/solar_panel_webapp/
+
+
+Web-Application project structure:
+```
+SOLAR_PANEL_WEBAPP:
+├── src\main
+│   ├── java\web
+│   │   ├── BLogicDB.java
+│   │   └── GetinMax.java
+│   └── webapp
+|       ├── css
+|       |   └── style.css
+|       ├── js
+|       |   ├── mqtt-client.js
+|       |   └── mqttws31.js
+|       ├── WEB-INF
+|       |   └── web.xml
+│       └── index.jsp
+├── pom.xml
+└── README.txt
+```
+
 # Authors
 
 * [Matteo Frigo](https://github.com/FrigoMatteo)
