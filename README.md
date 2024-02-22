@@ -246,7 +246,7 @@ SOLAR_PANEL_WEBAPP:
 
 ## Links
 
-* [Video]()
+* [Video](https://www.youtube.com/watch?v=K_GaUwrrinw)
 * [Project presentation](https://prezi.com/view/4WQAjCaXVCfLb5RL5ls9/)
 
 
