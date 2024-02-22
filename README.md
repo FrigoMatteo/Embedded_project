@@ -228,8 +228,6 @@ SOLAR_PANEL_WEBAPP:
 
 # Authors
 
-DA MODIFICARE
-
 * [Matteo Frigo](https://github.com/FrigoMatteo)
   * UART communication
   * Light sensor
