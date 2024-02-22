@@ -2,9 +2,9 @@
 #include <PubSubClient.h>
 
 // Wi-Fi setting
-const char* ssid = "1L_W1F1";     // *********** IMPORTANT *********** WiFi name
-//const char* ssid = "1L_W1F1";     // *********** IMPORTANT *********** WiFi name
-const char* password = "kenny281";       // *********** IMPORTANT *********** WiFi password
+const char* ssid = "/Wifi name/";     // *********** IMPORTANT *********** WiFi name
+//const char* ssid = "/Wifi name/";     // *********** IMPORTANT *********** WiFi name
+const char* password = "/WifiPassword/";       // *********** IMPORTANT *********** WiFi password
 
 // MQTT setting
 const char* ipServer = "192.168.24.240"; // *********** IMPORTANT *********** MQTT server IP
