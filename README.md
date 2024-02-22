@@ -237,7 +237,8 @@ DA MODIFICARE
   * Testing part
 * [Quentin Meneghini](https://github.com/kenny2817)
   * Graphic view
-  * Temperature/humidity sensors
+  * MSP432 code structure
+  * Temperature/humidity and current sensors
   * Electrical wiring
 * [Alberto Messa](https://github.com/MessaAlberto)
   * Graphic view
@@ -248,6 +249,6 @@ DA MODIFICARE
 ## Links
 
 * [Video](https://youtu.be/mkZK5LPMyHU)
-* [Project presentation](https://github.com/dongi01/SmartIrrigation_IoTUniTN/blob/64b6fd78eb5f5494780a2737d49178241027ac5e/IoT%20Project%20Presentation.pptx)
+* [Project presentation](https://prezi.com/view/4WQAjCaXVCfLb5RL5ls9/)
 
 
